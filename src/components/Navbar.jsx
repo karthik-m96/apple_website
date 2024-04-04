@@ -1,12 +1,23 @@
+import { appleImg, bagImg, searchImg } from "../utils"
+
 const Navbar = () => {
     return (
-        <nav>
-            {['iPhones', 'Macbook', 'Tablet'].map((nav) => (
-                <div key={nav}>
-                    {nav}
+        <header>
+            <nav>
+                <img src={appleImg} alt="apple" width={12} height={18} />
+                <div>
+                    {['iPhones', 'Macbook', 'Tablet'].map((nav) => (
+                        <div key={nav}>
+                            {nav}
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </nav>
+                <div>
+                    <img src={searchImg} alt="search" width={18} height={18}/>
+                    <img src={bagImg} alt="bag" width={18} height={18}/> 
+                </div>
+            </nav>
+        </header>
     )
 }
 
